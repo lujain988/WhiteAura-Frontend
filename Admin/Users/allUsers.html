@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Basic Page Info -->
+    <meta charset="utf-8" />
+    <title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
+
+    <!-- Site favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="vendors/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="vendors/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="vendors/images/favicon-16x16.png"
+    />
+
+    <!-- Mobile Specific Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="vendors/styles/core.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="vendors/styles/icon-font.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="src/plugins/datatables/css/dataTables.bootstrap4.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="src/plugins/datatables/css/responsive.bootstrap4.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="vendors/styles/style.css" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-GBZ3SGGX85"
+    ></script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2973766580778258"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-GBZ3SGGX85");
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NXZMQSS");
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+
+		
+      /*    this is my changes*/
+      
+      .fa-book-reader:before {
+          content: "\f5da";
+          margin-left: 38px;
+      }
+      
+      .text-primary {
+          color: black !important;
+        }
+          .left-side-bar {
+          background-color: white;
+      }
+      .bi-file-earmark-text::before {
+          content: "\f38b";
+          color: #212529;
+      }
+      .sidebar-menu .dropdown-toggle {
+          display: block;
+          padding: 14px 15px 14px 67px;
+          font-size: 15px;
+          color: #000;
+          font-weight: 500;
+          position: relative;
+          border-radius: 8px;
+          font-family: 'Inter', sans-serif;
+          -webkit-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+      }
+      .bi-house::before {
+          content: "\f425";
+          color: #000;
+      }
+      .sidebar-menu>ul>li>.dropdown-toggle.active {
+          background-color: rgba(236, 240, 244, .19);
+          color: rgb(63, 63, 63);
+      }
+      .header-left {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          height: 100%;
+          width: 50%;
+          background: #353435;
+      }
+      .header-right {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: end;
+          -ms-flex-pack: end;
+          justify-content: flex-end;
+          height: 70px;
+          width: 50%;
+          background-color: #333232;
+      }
+      
+      .toggle:hover, .sidebar-menu .show>.dropdown-toggle {
+          background: rgba(236, 240, 244, .19);
+          color: #000;
+      }
+      
+      .sidebar-menu .submenu li a {
+          display: block;
+          padding: 14px 15px 14px 60px;
+          font-size: 14px;
+          color: #000;
+          font-weight: 400;
+          border-radius: 8px;
+          position: relative;
+          font-family: 'Inter', sans-serif;
+      }
+      .sidebar-menu .dropdown-toggle:hover, .sidebar-menu .show>.dropdown-toggle {
+          background: rgba(236, 240, 244, .19);
+          color: #000;
+      }
+        </style>
+        <!-- End Google Tag Manager -->
+  </head>
+  
+  <body>
+  
+  
+  <div class="header">
+    <div class="header-left">
+      <div class="menu-icon bi bi-list"></div>
+      <div class="search-toggle-icon bi bi-search" data-toggle="header_search"></div>
+    
+    </div>
+    <div class="header-right">
+      <div class="dashboard-setting user-notification">
+        <div class="dropdown">
+          <a class="dropdown-toggle no-arrow" href="javascript:;" data-toggle="right-sidebar">
+          
+          </a>
+        </div>
+      </div>
+  
+      <div class="user-info-dropdown">
+        <div class="dropdown">
+          <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+            
+            <span class="user-name">User name</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+          
+            <a class="dropdown-item" ><i class="dw dw-logout"></i> Log Out</a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  
+  
+  <div class="left-side-bar">
+    <div class="sidenav-header align-items-center" style=" text-align: center;">
+			<a class="navbar-brand" href="javascript:void(0)">
+				<div style="text-align: center; ;">
+					<img style="width: 100px;" src="../vendors/images/logo1.png" alt="description of image" class="me-3">
+				</div>
+				
+			</a>
+		  </div>
+    <div class="menu-block customscroll">
+      <div class="sidebar-menu">
+        <ul id="accordion-menu">
+          <li class="dropdown">
+            <a href="../index1.html" class="dropdown-toggle  no-arrow">
+              <span class="micon bi bi-house"></span><span class="mtext">Home</span>
+            </a>
+          </li>
+          <li class="dropdown">
+            <a href="javascript:;" class="dropdown-toggle">
+              <span class="micon bi bi-file-earmark-text"></span
+              ><span class="mtext">User </span>
+            </a>
+            <ul class="submenu">
+              <li><a href="../Users/allUsers.html">ALL Users</a></li>
+           
+            </ul>
+            </li>
+            <li class="dropdown">
+              <a href="javascript:;" class="dropdown-toggle">
+                <span class="micon bi bi-file-earmark-text"></span
+                ><span class="mtext">Vendors </span>
+              </a>
+              <ul class="submenu">
+                <li><a href="../Vendor/ShowVendor.html">ALL Vendors</a></li>
+                <li>
+                <a href="../Vendor/ReviewVendor.html">Review Vendor</a>
+                </li>
+                <li>
+                <a href="../Vendor/addServicetype.html"
+                  >Add Service details</a
+                >
+                </li>
+              </ul>
+              </li>
+  
+          <li class="dropdown">
+            <a href="javascript:;" class="dropdown-toggle">
+              <span class="micon bi bi-file-earmark-text"></span><span class="mtext">Services
+                </span>
+            </a>
+            <ul class="submenu">
+              <li><a href="../Services/allServices.html">All Services</a></li>
+              <li><a href="../Services/addServices.html">Add Service</a></li>
+              
+            </ul>
+  
+          </li>
+          
+          <li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+						  <span class="micon bi bi-file-earmark-text"></span
+						  ><span class="mtext">Bookings </span>
+						</a>
+						<ul class="submenu">
+							<li><a href="../Bookings/AllBooking.html">ALL bookings</a></li>
+							<!-- <li><a href="Order/GetOrder.html">Search By Email</a></li> -->
+						</ul>
+					</li>
+          <li class="dropdown">
+            <a href="javascript:;" class="dropdown-toggle">
+              <span class="micon bi bi-file-earmark-text"></span
+              ><span class="mtext">Testimonial  </span>
+            </a>
+            <ul class="submenu">
+              <li><a href="../Testimonial/Testimonial.html">ALL Testimonial </a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="javascript:;" class="dropdown-toggle">
+              <span class="micon bi bi-file-earmark-text"></span
+              ><span class="mtext">Contact </span>
+            </a>
+            <ul class="submenu">
+              <li><a href="../Contact/Contact Us.html">ALL Contact</a></li>
+              <li><a href="../Contact/ReplyAdmin.html">Reply Contact</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-menu-overlay"></div>>
+
+    <div class="main-container">
+      <div class="pd-ltr-20">
+        <br/>
+        <h1>Users</h1>
+<br/><br/>
+        <table class="table" id="table">
+          <thead>
+            <tr>
+              <th>first name</th>
+              <th>last name</th>
+              <th>User image</th>
+              <th>Email</th>
+              <th>phone number</th>
+              <th>Created At</th>
+            </tr>
+          </thead>
+          
+            <tbody>
+              <tr>
+              
+                <td>dima</td>
+                <td>ahmad</td>
+                <td><img src="" alt="no image"></td>
+                <td>dima@gmail.com</td>
+                <td>96278121102 </td>
+                <td>2024-09-04 23:54:56.207</td>
+        
+              </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+
+  
+    <script src="vendors/scripts/core.js"></script>
+    <script src="vendors/scripts/script.min.js"></script>
+    <script src="vendors/scripts/process.js"></script>
+    <script src="vendors/scripts/layout-settings.js"></script>
+    <script src="src/plugins/apexcharts/apexcharts.min.js"></script>
+    <script src="src/plugins/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+    <script src="src/plugins/datatables/js/dataTables.responsive.min.js"></script>
+    <script src="src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
+    <script src="vendors/scripts/dashboard.js"></script>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NXZMQSS"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+  </body>
+</html>
